@@ -1,0 +1,65 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  background: #ffffff;
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #439cd6;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+a:hover {
+  color: #7ab9e3;
+}
+
+/* HEADER */
+
+header {
+  background-color: #439cd6;
+  padding: 30px 0 10px 0;
+}
+
+.header-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 10%;
+}
+
+.header-container > ul {
+  list-style: none;
+  display: flex;
+}
+
+.header-lis {
+  list-style: none;
+  padding: 0 20px;
+}
+
+.header-links {
+  color: #ecf0f3;
+  font-weight: 900;
+  font-size: 14px;
+}
+
+.header-links:hover, .header-links:focus {
+  color: #ffffff;
+}
+
+.title-dreamcamp {
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 20px;
+  font-stretch:
+}
