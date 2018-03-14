@@ -1,3 +1,26 @@
+/* GOTHAM FONT INSTALLATION */
+@font-face {
+  font-family: 'Gotham';
+  src: url('../fonts/Gotham-Bold.ttf') format("truetype");
+  font-weight: 700;
+  font-style: normal;
+ }
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('../fonts/Gotham-Medium.ttf') format("truetype");
+  font-weight: 400;
+  font-style: normal;
+ }
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('../fonts/Gotham-Light.ttf') format("truetype");
+  font-weight: 300;
+  font-style: normal;
+ }
+
+/* GENERAL */
 *, *:before, *:after {
   box-sizing: border-box;
 }
@@ -8,25 +31,38 @@ html {
 
 body {
   background: #ffffff;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   margin: 0;
 }
 
 a {
   text-decoration: none;
-  color: #439cd6;
   -webkit-transition: .5s ease;
   transition: .5s ease;
 }
-a:hover {
-  color: #7ab9e3;
+
+/* FONT-WEIGHT CLASSES */
+.bold {
+  font-weight: 700;
+}
+.medium {
+  font-weight: 400;
+}
+.light {
+  font-weight: 300;
+}
+.gotham {
+  font-family: 'Gotham';
 }
 
-/* HEADER */
 
+/* HEADER */
 header {
+  position: fixed;
+  width: 100%;
   background-color: #439cd6;
-  padding: 30px 0 10px 0;
+  padding: 10px 0 5px 0;
+  z-index: 100;
 }
 
 .header-container{
@@ -37,7 +73,7 @@ header {
   margin: 0 10%;
 }
 
-.header-container > ul {
+.header-container ul {
   list-style: none;
   display: flex;
 }
@@ -49,8 +85,7 @@ header {
 
 .header-links {
   color: #ecf0f3;
-  font-weight: 900;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .header-links:hover, .header-links:focus {
@@ -59,7 +94,74 @@ header {
 
 .title-dreamcamp {
   color: #ffffff;
-  font-weight: 900;
   font-size: 20px;
-  font-stretch:
+}
+
+
+/* INTRO SECTION */
+.intro {
+
+}
+
+.intro-video {
+  top: 0;
+  /*height: 100vh;*/ /*messes with height??*/
+  position: relative;
+}
+
+/*
+    height: auto;
+    position: relative;
+    width: auto;
+    max-height: 100%;
+    max-width: 100%;
+*/
+
+
+#autoplayVid {
+  max-width: 100%;
+  height: auto;
+  min-height: 100%;
+  transition: 0.75s;
+}
+
+/*
+    max-width: 100%;
+    height: auto;
+    min-height: 100%;
+    width: auto;
+*/
+
+#autoplaybtn:hover {
+}
+
+.autoplay-button {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  outline: none;
+}
+
+.autoplay-button-image {
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  background-image: url("../video/img/buttonAutoplayPause.png");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.play-button-image {
+  background-image: url("../video/img/buttonAutoplayPlay.png");
+}
+
+.video-stopfade {
+   /*opacity: .5;*/
+   filter: brightness(75%);
 }

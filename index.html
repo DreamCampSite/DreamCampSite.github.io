@@ -2,26 +2,28 @@
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
-	<title>dreamCamp</title>
+	<title>dreamCAMP</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<meta name="description" content="dreamCamp - surfing since whatever.">
+	<meta name="description" content="dreamCamp - surfing since whenever.">
 	<meta name="author" content="dreamCampTeam">
 
-	<link rel="stylesheet" type="text/css" href="./css/styles.css">
-	<script src="./js/script.js"></script>
+  <link rel="icon" href="./lib/logo.ico">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/style-responsive.css">
 </head>
 <body>
+  <!-- HEADER -->
   <header>
 
-    <div class="header-container">
+    <div class="header-container bold gotham">
     
-      <div class=""><a class="title-dreamcamp" href="">dreamCAMP</a></div>
+      <div class=""><a class="title-dreamcamp" href="">dreamCamp</a></div>
       <ul class="header-nav">
-        <li class="header-lis"><a class="header-links" href="#">HOME</a>
-        </li>
-        
+        <li class="header-lis"><a class="header-links" href="#">HOME</a></li>
         <li class="header-lis"><a class="header-links" href="#">PROJECT</a></li>
         <li class="header-lis"><a class="header-links" href="#">CONTACT</a></li>
       </ul>
@@ -29,5 +31,27 @@
     </div>
   
   </header>
+
+  <section class="intro">
+    
+    <div class="intro-video">
+      <video autoplay muted loop id="autoplayVid">
+        <source src="./video/dcautoplay.mp4" type="video/mp4">
+      </video>
+
+      <button id="autoplayBtn" class="autoplay-button">
+        <div class="autoplay-button-image"></div>
+      </button>
+    </div>
+
+  </section>
+
+  <section class="section-2-placeholder intro-video">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit ipsam quasi accusamus commodi vel molestias saepe in, dolorem, adipisci quis placeat nulla eum veniam libero deleniti assumenda labore amet suscipit!25
+  </section> 
+
+
+  <script src="./js/script.js"></script>
+  <script src="./js/videoAutoplay.js"></script>
 </body>
 </html>
