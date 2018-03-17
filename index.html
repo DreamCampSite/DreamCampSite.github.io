@@ -19,13 +19,13 @@
   <!-- HEADER -->
   <header>
 
-    <div class="header-container bold gotham">
+    <div class="header-container bold">
     
-      <div class=""><a class="title-dreamcamp" href="">dreamCamp</a></div>
+      <div class=""><a class="title-dreamcamp gotham" href="">dreamCamp</a></div>
       <ul class="header-nav">
-        <li class="header-lis"><a class="header-links" href="#">HOME</a></li>
-        <li class="header-lis"><a class="header-links" href="#">PROJECT</a></li>
-        <li class="header-lis"><a class="header-links" href="#">CONTACT</a></li>
+        <li class="header-lis"><a class="header-links" href="#">ГЛАВНАЯ</a></li>
+        <li class="header-lis"><a class="header-links" href="#">О ПРОЕКТЕ</a></li>
+        <li class="header-lis"><a class="header-links" href="#">КОНТАКТЫ</a></li>
       </ul>
       
     </div>
@@ -108,7 +108,66 @@
       </div>
 
     </div>
-  </section> 
+  </section>
+
+
+
+  <section class="contacts">
+    <div class="contacts-container">
+      <div class="contacts-header-wrapper">
+        <h1 class="contacts-header blue extra-bold">Напишите нам</h1>
+      </div>
+
+      <form method="post" action="?" data-jkit="[form:validateonly=true]" class="contacts-form">
+      
+        <div class="contact-block">
+          <p>
+            <label class="contact-block-label" for="miniusername">Имя пользователя:</label><br />
+            <input name="miniusername" id="miniusername" data-jkit="[validate:required=true;min=3;max=10;error=Пожалуйста, введите своё имя пользователя (3-10 символов)]">
+          </p>
+        </div>  
+        
+        <div class="contact-block">  
+          <p>
+            <label class="contact-block-label" for="miniemail">E-mail:</label><br />
+            <input name="miniemail" id="miniemail" data-jkit="[validate:required=true;strength=50;error=Пожалуйста, напишите свой e-mail]">
+          </p>
+        </div>
+
+        <div class="contact-block">  
+          <p>
+            <label class="contact-block-label" for="miniphone">Контактный телефон:</label><br />
+            <input name="miniphone" id="miniphone" data-jkit="[validate:required=true;error=Пожалуйста, напишите свой номер телефона]">
+          </p>
+        </div>
+        
+        <div class="contact-block contact-message">  
+          <p>
+            <label class="contact-block-label">Сообщение:</label><br />
+            <textarea class="contact-block-textarea" id="message" name="message"></textarea>
+            
+            
+          </p>
+        </div>
+
+        <div class="contacts-button">
+          <input class="button-submit extra-bold" name="send" type="submit" value="ОТПРАВИТЬ" />     
+        </div>   
+          
+
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    
+    <div class="footer-container">
+      <div class="footer-block white">Kyiv 2018</div>
+      <div class="footer-block white">Developed by the A team</div>
+      <div class="footer-block white">© Dream Camp</div>
+    </div>
+
+  </footer>
 
 
   <script src="./js/script.js"></script>
