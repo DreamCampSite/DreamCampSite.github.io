@@ -71,7 +71,8 @@ ul {
 
 
 /* HEADER */
-header {
+.header-main {
+  display: block;
   position: fixed;
   width: 100%;
   background-color: #439cd6;
@@ -116,14 +117,177 @@ header {
 }
 
 
+/*** HEADER BOXED ***/
+.header-boxed {
+  display: none;
+  width: 100%;
+  background-color: #439cd6;
+}
+
+.header-boxed-container {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 50px;
+}
+
+.header-boxed-lis {
+  color: #ffffff;
+}
+
+.header-boxed-lis:hover {
+  color: #dddfe1;
+}
+
+.hamburger-icon {
+  width: 20px;
+}
+
+.boxed-logo-dreamcamp-wrapper {
+  width: 50%;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+
+}
+
+.boxed-header-logo {
+  width: 70px;
+
+  background-image: url("../lib/logo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.empty-block {
+  width: 25%;
+  /*margin-right: 50px;*/
+}
+
+.menu-toggle {
+  width: 25%;
+  padding: 20px 0 20px 0;
+
+  display: block;
+  position: relative;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.menu-toggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+/* Simple hamburger */
+.menu-toggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #ffffff;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.3s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.3s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.35s ease;
+}
+
+.hamburger-wrapper-menu {
+}
+
+.menu-toggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+.menu-toggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+/* Transform all the slices of hamburger */
+.menu-toggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #f2f6f9;
+}
+
+.menu-toggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+.menu-toggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/* The actual menu */
+.burger-menu {
+  position: absolute;
+  width: calc(100vw + 100px);
+  margin: -90px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  
+  background: #3e3f3f;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.3s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+.burger-menu li {
+  padding: 15px 0;
+  font-size: 18px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+.menu-toggle input:checked ~ ul {
+  transform: none;
+}
+
+
+
+
+
 /* INTRO SECTION */
 .intro {
-
+  width: 100vw;
 }
 
 .intro-video {
   top: 0;
-  /*height: 100vh;*/ /* ?messes with height? */
   position: relative;
 }
 
@@ -212,7 +376,6 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /*padding: 20vh 10vh 5vh 10vh; */
   padding: 200px 100px 50px 100px;
 }
 
@@ -233,7 +396,6 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  /*padding: 5vh 10vh 20vh 10vh; */
   padding: 50px 100px 200px 100px;
 }
 
@@ -286,13 +448,31 @@ header {
 
 /* CONTACT */
 .contacts {
-  height: 100vh;
-  padding: 100px 12%;
+  padding: 30px;
+  height: calc(100vh + 60px);
   background-color: white;
+  z-index: 1;
+  position: relative;
 }
 
 .contacts-container {
+  position: relative;
+  padding: 60px 10% 100px 10%;
+  border: 20px solid #439cd6;
+  z-index: 3;
+  background-color: transparent;
+}
 
+.contact-surfboard-wrapper {
+  position: absolute;
+  width: 100%;
+  z-index: 4;
+  left: -200px;
+  top: -150px;
+}
+
+.surfboard-image {
+  max-width: 100%;
 }
 
 .contacts-header-wrapper {
@@ -319,6 +499,7 @@ header {
   flex-wrap: wrap;
   -ms-align-items: flex-start;
   align-items: flex-start;
+  padding-bottom: 50px;
 }
 
 .contact-block {
@@ -327,7 +508,13 @@ header {
 }
 
 .contact-message {
-  flex-grow: 0.5;
+  /*width: 50%;*/
+  width: calc(50% + 30% / 2);
+}
+
+.contact-message-wrapper {
+  height: 200px;
+  width: 100%;
 }
 
 .contact-block p {
@@ -350,7 +537,6 @@ input {
   line-height: 22px;
   margin: 10px 0;
   font-size: 13px;
-  padding-left: 15px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
