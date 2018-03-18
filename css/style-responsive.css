@@ -60,7 +60,6 @@
 
 	#autoplayVid {
 		height: 50vh;
-		max-width: none;
 	}
 
 	.autoplay-button {
@@ -184,8 +183,7 @@
 	}
 
 	#autoplayVid {
-		max-width: 150%;
-		height: 70vh;
+		height: 50vh;
 	}
 
 	.autoplay-button {
