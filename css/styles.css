@@ -27,6 +27,8 @@
 
 html {
   overflow-y: scroll;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 body {
@@ -277,8 +279,10 @@ ul {
 
 
 /* INTRO SECTION */
-.intro {
-  width: 100vw;
+.intro {/*
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;*/
 }
 
 .intro-video {
