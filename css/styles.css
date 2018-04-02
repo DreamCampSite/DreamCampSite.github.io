@@ -251,6 +251,7 @@ ul {
 
 /* The actual menu */
 .burger-menu {
+  height: 100vh;
   position: absolute;
   width: calc(100vw + 100px);
   margin: -90px 0 0 -50px;

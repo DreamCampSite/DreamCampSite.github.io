@@ -62,7 +62,7 @@
 	}
 
 	#autoplayVid {
-		height: 50vh;
+		height: 70vh;
 		width: auto;
 	}
 
@@ -190,7 +190,7 @@
 	}
 
 	#autoplayVid {
-		height: 40vh;
+		height: 70vh;
 		width: auto;
 		top: 0;
 	}
@@ -200,7 +200,7 @@
 		height: 100%;
 	}
 
-	.autoplay-button {
+	.autoplay-button-image {
 		display: none;
 	}
 
@@ -276,7 +276,7 @@
 	/* CONTACT */
 	.contacts {
 		height: auto;
-		padding: 60px 30px;
+		padding: 60px 0;
 	}
 
 	.contacts-container {
